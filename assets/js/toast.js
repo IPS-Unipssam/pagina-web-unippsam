@@ -6,7 +6,7 @@
     // Mostrar el toast después de 15 segundos
     setTimeout(() => {
       toast.style.display = "block";
-    }, 10000); // 15 segundos de espera
+    }, 15000); // 15 segundos de espera
 
     // Cerrar automáticamente después de 60 segundos desde que se muestra
     setTimeout(() => {
@@ -19,7 +19,7 @@
     });
   });
 
-//   otro
+//   otro acerca de nosotros
 
  document.addEventListener("DOMContentLoaded", function () {
     const toast = document.getElementById("userSupportToastAlt");
@@ -28,7 +28,7 @@
     // Mostrar el toast después de 15 segundos
     setTimeout(() => {
       toast.style.display = "block";
-    }, 7000); // 15 segundos de espera
+    }, 15000); // 15 segundos de espera
 
     // Cerrar automáticamente después de 60 segundos desde que se muestra
     setTimeout(() => {
@@ -42,16 +42,16 @@
   });
 
 
-//   otro
+//   otro nuestras sedes
 
   document.addEventListener("DOMContentLoaded", function () {
-    const toast = document.getElementById("userSupportToast");
+    const toast = document.getElementById("userSupportToast1");
     const closeBtn = toast.querySelector(".toast-close");
 
     // Mostrar el toast después de 15 segundos
     setTimeout(() => {
       toast.style.display = "block";
-    }, 7000); // 15 segundos de espera
+    }, 15000); // 15 segundos de espera
 
     // Cerrar automáticamente después de 60 segundos desde que se muestra
     setTimeout(() => {

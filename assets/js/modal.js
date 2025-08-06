@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Mostrar el modal automáticamente después de un pequeño delay
   setTimeout(() => {
     modal.classList.add("show");
-  }, 2000); // aparece tras 2.5 segundos
+  }, 5000); // aparece tras 2.5 segundos
 
   // Función para cerrar el modal y guardar que fue cerrado
   const closeModal = () => {
