@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+  <!-- Codificación y adaptación a dispositivos -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- SEO -->
+  <title>IPS UNIPSSAM S.A.S - Especialistas en Salud Mental</title>
+  <meta name="description" content="IPS UNIPSSAM S.A.S. es una institución especializada en salud mental en Colombia, ofreciendo atención integral psicológica y psiquiátrica con enfoque humano.">
+  <meta name="keywords" content="salud mental, psiquiatría, psicología, atención psicológica, IPS Colombia, bienestar emocional, terapia, UNIPSSAM">
+  <meta name="author" content="Jaime Caballero">
+
+  <!-- Accesibilidad y experiencia móvil -->
+  <meta name="theme-color" content="#0a4a7c"> 
+
+  <!-- Preconexión a fuentes externas para rendimiento -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Tipografía principal -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+
+  <!-- Favicon / ícono del sitio -->
+  <link rel="icon" href="./assets/images/logito.png" type="image/x-icon">
+
+  <!-- Librerías CSS externas -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+  <!-- CSS de Lightbox2 -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Archivos de estilo locales -->
+  <link rel="stylesheet" href="assets/css/fontawesome.css">
+  <link rel="stylesheet" href="assets/css/templatemo-finance-business.css">
+  <link rel="stylesheet" href="assets/css/owl.css">
+    <link rel="stylesheet" href="assets/css/toast.css">
+
+  <!-- Comentario: Unidad Prestadora del Servicio Mental (UNIPSSAM) -->
+
+</head>
+
+  <body>
+<!-- Modal de Bienvenida -->
+<div id="welcomeModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-describedby="modalDesc">
+  <div class="modal-content" data-aos="zoom-in" data-aos-duration="800">
+    
+    <!-- Botón de cierre -->
+    <button class="close-btn" id="closeModal" aria-label="Cerrar modal">
+      <i class="bi bi-x-lg" aria-hidden="true"></i>
+    </button>
+
+    <!-- Imagen de encabezado con overlay de logo -->
+    <div class="modal-header-img">
+      <img src="assets/images/admisiones.jpg" alt="Equipo de admisiones UNIPSSAM" class="modal-img" />
+      <div class="logo-overlay">
+        <img src="assets/images/Unipssam_horizontal_2.png" alt="Logo UNIPSSAM" />
+      </div>
+    </div>
+
+    <!-- Cuerpo del modal -->
+    <div class="modal-body-text">
+      <h2 id="modalTitle">¡Bienvenido a UNIPSSAM!</h2>
+      <p id="modalDesc">Estamos aquí para brindarte el mejor acompañamiento en salud mental. Agenda tu cita fácilmente con nuestro equipo de admisiones.</p>
+      <a href="https://ixcolombia.github.io/qrystalos.external/#/" class="boton_modal" target="_blank" rel="noopener noreferrer">
+        Programa tu cita
+      </a>
+    </div>
+    
+  </div>
+</div>
+
+
+<!-- Preloader -->
+<div id="preloader">
+  <div class="jumper">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+</div>
+
+<!-- Sección flotante de contacto -->
+<div id="whatsapp-container" onmouseleave="hideHelpText()">
+  <p id="help-text">Canales de contacto</p>
+
+  <div id="contact-menu">
+    <span id="close-menu" onclick="toggleMenu()" aria-label="Cerrar contacto">&times;</span>
+
+    <a href="https://wa.me/573123175936" target="_blank" class="contact-option" rel="noopener noreferrer">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
+      WhatsApp
+    </a>
+
+    <a href="tel:+573123175936" class="contact-option">
+      <img src="https://cdn-icons-png.flaticon.com/512/724/724664.png" alt="Teléfono" />
+      Llamada
+    </a>
+
+    <a href="mailto:contacto@unipssam.com" class="contact-option">
+      <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Correo electrónico" />
+      Correo
+    </a>
+
+    <a href="https://ixcolombia.github.io/qrystalos.external/#/" target="_blank" class="contact-option" rel="noopener noreferrer">
+      <img src="https://cdn-icons-png.flaticon.com/512/747/747310.png" alt="Agendar cita médica" />
+      Programar Cita
+    </a>
+  </div>
+
+  <div id="contact-button" onmouseover="showHelpText()" onclick="toggleMenu()" tabindex="0" aria-label="Abrir canales de contacto">
+    <i class="fas fa-headset fa-2x" aria-hidden="true"></i>
+  </div>
+</div>
+
+<!-- Toast de Apoyo al Usuario -->
+<div class="toast-support" role="alert" aria-live="polite" aria-atomic="true" id="userSupportToast">
+  <div class="toast-content">
+    <div class="toast-icon">🎉</div>
+    <div class="toast-message">
+      <strong>¿Necesitas ayuda?</strong> En UNIPSSAM Estamos contigo 😊<br>
+      <a href="https://wa.me/573123175936" target="_blank" class="toast-link">Escríbenos por WhatsApp</a> · O dejanos un mensaje
+      <a href="contact.html" class="toast-link">Formulario de contacto</a>
+    </div>
+    <button class="toast-close" aria-label="Cerrar notificación">&times;</button>
+  </div>
+</div>
+
+
+<!-- Header superior -->
+<div class="sub-header">
+  <div class="container">
+    <div class="row">
+      <!-- Sección izquierda -->
+      <div class="left-info-box">
+        <ul class="left-info">
+          <li>
+            <a href="#" title="Horarios Consulta Externa">
+              <i class="fa fa-clock-o" aria-hidden="true"></i>
+              Lun–Vie 08:00 AM – 05:00 PM
+              <span class="divider"></span>
+              Sáb 08:00 AM – 12:00 PM
+            </a>
+          </li>
+          <li>
+            <a href="tel:+573123175936" title="Llamar a Urgencias">
+              <i class="fa fa-phone" aria-hidden="true"></i>+57 317-372-8539
+            </a>
+          </li>
+          <li>
+            <a href="contact.html" title="Urgencias 24 Horas" class="urgent-blink">
+              <i class="fa fa-ambulance" aria-hidden="true"></i> Urgencias 24 Horas
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Sección derecha -->
+      <div class="right-icons-box">
+      <ul class="right-icons">
+        <li class="call-center-item">
+        <a href="tel:+573123175936" title="Llamar al Call Center">
+          <i class="fa fa-headphones fa-2x" aria-hidden="true"></i>
+          <span class="call-text">Call Center – 312-317-5936</span>
+        </a>
+      </li>
+      </ul>
+    </div>
+    </div>
+  </div>
+</div>
+<!-- Navegación principal -->
+<section class="hero">
+  <header class="header">
+    <nav class="navbar navbar-expand-lg" aria-label="Menú principal">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <img src="./assets/images/Unipssam_horizontal_2.png" alt="Logo de UNIPSSAM" style="height: 60px;">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Menú de navegación">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link active" href="index.html" aria-current="page">
+                <i class="fa-sharp fa-solid fa-house"></i>&nbsp;&nbsp;Inicio
+              </a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="acerca-de-nosotros.html" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Acerca de nosotros
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="nuestras_sedes.html"><i class="fas fa-building" aria-hidden="true"></i>&nbsp;&nbsp;Nuestras Sedes</a></li>
+                <li><a class="dropdown-item" href="estados_financieros.html"><i class="fas fa-coins"></i>&nbsp;&nbsp;Estados Financieros</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="services.html"><i class="fas fa-cogs"></i>&nbsp;&nbsp;Servicios</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html"><i class="fa-sharp fa-solid fa-address-book"></i>&nbsp;&nbsp;Contacto</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../assets/includes/login.php"><i class="fa-sharp fa-solid fa-users"></i>&nbsp;&nbsp;Aplicativo</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+</section>
+
+<!-- Banner principal -->
+<div class="main-banner header-text" id="top">
+  <div class="Modern-Slider">
+    <div class="item item-1">
+      <div class="img-fill">
+        <div class="text-content">
+          <h6>Atención especializada en salud mental...</h6>
+          <h4>SEDE LOPERNA</h4>
+          <p>Síguenos en: <a target="_blank" href="https://www.instagram.com/p/C-knmNjOkob/?hl=es-la" rel="noopener noreferrer">Instagram</a></p>
+          <a href="contact.html" class="filled-button">Contáctanos</a>
+        </div>
+      </div>
+    </div>
+    <div class="item item-2">
+      <div class="img-fill">
+        <div class="text-content">
+          <h6>Somos Especialistas en Salud Mental...</h6>
+          <h4>Nuestros<br>Servicios</h4>
+          <p>La salud mental es un tema serio. Conoce nuestros servicios.</p>
+          <a href="services.html" class="filled-button">Servicios</a>
+        </div>
+      </div>
+    </div>
+    <div class="item item-3">
+      <div class="img-fill">
+        <div class="text-content">
+          <h6>Sede San Martín</h6>
+          <h4>Valledupar, Cesar</h4>
+          <p>Comprometidos con tu bienestar. Atención integral y personalizada.</p>
+          <a href="about.html" class="filled-button">Ver más</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Llamado a la acción -->
+<div class="request-form">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8" data-aos="fade" data-aos-duration="1000">
+        <h4>¿NECESITAS AYUDA?</h4>
+        <span>Si necesitas nuestros servicios o deseas conocernos mejor, contáctanos y atenderemos tu solicitud.</span>
+      </div>
+      <div class="col-md-4" data-aos="fade" data-aos-duration="1000">
+        <a href="contact.html" class="border-button">Contáctanos</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Servicios destacados -->
+<section class="home-services" id="servicios">
+  <div class="home-container">
+    <div class="home-section-heading" data-aos="fade-up">
+      <h2>Nuestros <em>Servicios</em></h2>
+      <span>Somos Especialistas en Salud Mental 🧠</span>
+    </div>
+
+    <div class="home-service-grid">
+      <div class="home-service-item" data-aos="zoom-in" data-aos-duration="1200" data-aos-delay="500">
+        <img src="assets/images/altamarservice.jpg" alt="Psiquiatría">
+        <div class="home-down-content">
+          <h4>Psiquiatría</h4>
+          <p>Atención especializada por médicos psiquiatras expertos.</p>
+          <a href="services.html" class="filled-button">Ver Más</a>
+        </div>
+      </div>
+
+      <div class="home-service-item" data-aos="zoom-in" data-aos-duration="1200" data-aos-delay="500">
+        <img src="assets/images/Psicologia_clinica1.jpg" alt="Psicología Clínica">
+        <div class="home-down-content">
+          <h4>Psicología Clínica</h4>
+          <p>Terapias personalizadas para el bienestar emocional.</p>
+          <a href="services.html" class="filled-button">Ver Más</a>
+        </div>
+      </div>
+
+      <div class="home-service-item" data-aos="zoom-in" data-aos-duration="1200" data-aos-delay="300">
+        <img src="assets/images/neurologia.png" alt="Neurología">
+        <div class="home-down-content">
+          <h4>Neurología</h4>
+          <p>Diagnóstico y tratamiento con tecnología avanzada.</p>
+          <a href="services.html" class="filled-button">Ver Más</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Acerca De Nosotros -->
+<section class="more-info" aria-labelledby="quienes-somos">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="more-info-content">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="left-video" data-aos="zoom-in-right" data-aos-duration="1000">
+                <div class="video-container">
+                  <iframe width="560" height="315"
+                    src="https://www.youtube.com/embed/QoYWr-ZAIu0?si=i4RrFLMYEAaKjYo2"
+                    title="Video institucional de UNIPSSAM" frameborder="0"
+                    allowfullscreen aria-label="Video institucional de UNIPSSAM">
+                  </iframe>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 align-self-center">
+              <div class="right-content" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+                <span>Conócenos</span>
+                <h2 id="quienes-somos">¿Quiénes <em>somos?</em></h2>
+                <p>
+                  La Unidad Prestadora de Servicios de Salud Mental S.A.S (UNIPSSAM) ofrece asistencia
+                  interdisciplinaria a pacientes y sus familias con problemas de salud mental. Nos enfocamos
+                  en mejorar la experiencia general de nuestros pacientes y personal, inculcando valores
+                  de aprendizaje continuo.
+                </p>
+                <a href="about.html" class="filled-button">Leer más</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</section>
+
+<!-- Sección Galería -->
+<section class="gallery gallery-section" aria-labelledby="galeria-fotos">
+  <div class="container">
+    <div class="row">
+      <!-- Encabezado -->
+      <div class="col-md-12">
+        <div class="section-heading" data-aos="fade-up" data-aos-duration="1000">
+          <h2 id="galeria-fotos">Galería<em> Fotográfica</em></h2>
+          <span>Conoce nuestras instalaciones</span>
+        </div>
+      </div>
+
+      <!-- Carrusel -->
+      <div class="col-md-12">
+        <div class="gallery-grid">
+          <div class="owl-gallery owl-carousel owl-theme" aria-label="Galería de imágenes de la IPS">
+            <!-- Repite para cada imagen -->
+            <div class="gallery-item" data-aos="fade-up" data-aos-delay="100">
+               <a href="assets/images/fallada23.jpg" data-lightbox="galeria" data-title="Vista de la fachada de la sede principal de UNIPSSAM">
+              <img src="assets/images/fallada23.jpg" alt="Vista de la fachada de la sede principal de UNIPSSAM">
+              </a>
+            </div>
+
+            <div class="gallery-item" data-aos="fade-up" data-aos-delay="200">
+               <a href="assets/images/cuarto.jpg" data-lightbox="galeria" data-title="Habitación para pacientes">
+              <img src="assets/images/cuarto.jpg" alt="Habitación para pacientes">
+              </a>
+            </div>
+
+            <div class="gallery-item" data-aos="fade-up" data-aos-delay="300">
+                 <a href="assets/images/aguachica-galeria.jpg" data-lightbox="galeria" data-title="Sede de Aguachica, vista exterior">
+              <img src="assets/images/aguachica-galeria.jpg" alt="Sede de Aguachica, vista exterior">
+              </a>
+            </div>
+
+            <div class="gallery-item" data-aos="fade-up" data-aos-delay="400">
+              <a href="assets/images/pasillo-galeria.png" data-lightbox="galeria" data-title="Pasillo clínico">
+                <img src="assets/images/pasillo-galeria.png" alt="Pasillo clínico">
+              </a>
+             
+            </div>
+
+            <div class="gallery-item" data-aos="fade-up" data-aos-delay="500">
+              <a href="assets/images/pasillo2-galeria.jpg" data-lightbox="galeria" data-title="Pasillo con acceso a consultorios">
+              <img src="assets/images/pasillo2-galeria.jpg" alt="Pasillo con acceso a consultorios">
+              </a>
+            </div>
+
+            <div class="gallery-item" data-aos="fade-up" data-aos-delay="600">
+               <a href="assets/images/pasillo.jpg" data-lightbox="galeria" data-title="Área de tránsito interno">
+              <img src="assets/images/pasillo.jpg" alt="Área de tránsito interno">
+              </a>
+            </div>
+
+            <div class="gallery-item" data-aos="fade-up" data-aos-delay="600">
+              <a href="assets/images/urgencias2.jpg" data-lightbox="galeria" data-title="Área de urgencias médicas 1">
+              <img src="assets/images/urgencias2.jpg" alt="Área de urgencias médicas 1">
+              </a>
+            </div>
+
+            <div class="gallery-item" data-aos="fade-up" data-aos-delay="600">
+               <a href="assets/images/urgencias.jpg" data-lightbox="galeria" data-title="Área de urgencias médicas 2">
+              <img src="assets/images/urgencias.jpg" alt="Área de urgencias médicas 2">
+              </a>
+            </div>
+
+            <div class="gallery-item" data-aos="fade-up" data-aos-delay="600">
+               <a href="assets/images/start.jpg" data-lightbox="galeria" data-title="Sala de espera institucional">
+              <img src="assets/images/start.jpg" alt="Sala de espera institucional">
+              </a>
+            </div>
+
+            <div class="gallery-item" data-aos="fade-up" data-aos-delay="600">
+              <a href="assets/images/aguachica1.jpg" data-lightbox="galeria" data-title="Entrada alternativa sede Aguachica">
+              <img src="assets/images/aguachica1.jpg" alt="Entrada alternativa sede Aguachica">
+              </a>
+            </div>
+
+            <div class="gallery-item" data-aos="fade-up" data-aos-delay="600">
+              <a href="assets/images/habitacion.jpg" data-lightbox="galeria" data-title="Habitación equipada para pacientes">
+              <img src="assets/images/habitacion.jpg" alt="Habitación equipada para pacientes">
+              </a>
+            </div>
+
+            <div class="gallery-item" data-aos="fade-up" data-aos-delay="600">
+              <a href="assets/images/pasillo2.jpg" data-lightbox="galeria" data-title="Pasillo de acceso general">
+              <img src="assets/images/pasillo2.jpg" alt="Pasillo de acceso general">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Formulario de contacto -->
+<section class="contact-section" aria-labelledby="titulo-contacto" data-aos="fade-up" data-aos-duration="1000">
+  <div class="section-title" data-aos="fade-down" data-aos-duration="1000">
+    <h2 id="titulo-contacto">Envíanos un <em>mensaje</em></h2>
+    <p class="section-subtitle">Tu salud mental es lo más importante para nosotros</p>
+  </div>
+
+  <div class="contact-content">
+    <div class="contact-image" data-aos="fade-left" data-aos-duration="800" data-aos-delay="400">
+      <img src="assets/images/Contact us-amico.png" alt="Ilustración de contacto médico" />
+    </div>
+
+    <div class="contact-form" data-aos="fade-right" data-aos-duration="2000" data-aos-delay="600">
+      <form action="../assets/includes/" method="post" aria-label="Formulario de contacto">
+        <div class="form-group">
+
+          <input type="text" id="name" name="name" placeholder="Ingrese su nombres completos" required />
+        </div>
+        <div class="form-group">
+      
+          <input type="email" id="email" name="email" placeholder="Ingrese su correo electrónico" required />
+        </div>
+        <div class="form-group">
+
+          <textarea id="message" name="message" rows="4" placeholder="Escriba su mensaje..." required></textarea>
+        </div>
+        <button type="submit" class="send-button" aria-label="Enviar mensaje de contacto">Enviar <span style="margin-left: 8px;">📤</span></button>
+      </form>
+
+      <div id="form-message" class="form-message" style="display: none;"></div>
+    </div>
+  </div>
+  
+</section>
+
+<!-- Sección: Convenios -->
+<section class="partners-section" aria-labelledby="titulo-convenios">
+  <div class="section-heading" data-aos="fade-up" data-aos-duration="800">
+    <h2 id="titulo-convenios" class="section-title">Nuestros <em>Convenios</em></h2>
+    <p class="section-subtitle">Te invitamos a conocer los convenios que tenemos en UNIPSSAM</p>
+  </div>
+
+  <div class="ticker-section" data-aos="fade-up" data-aos-duration="1000">
+    <div class="ticker-wrapper" aria-label="Logos de entidades con convenio">
+      <div class="ticker-track">
+        <!-- Tarjetas con logos -->
+        <div class="ticker-card" data-aos="zoom-in" data-aos-delay="0">
+          <a href="https://www.saludtotal.com.co" target="_blank" rel="noopener">
+            <img src="assets/images/saludtotal.png" alt="Logo de Salud Total EPS">
+          </a>
+        </div>
+        <div class="ticker-card" data-aos="zoom-in" data-aos-delay="100">
+          <a href="https://www.famisanar.com.co/" target="_blank" rel="noopener">
+            <img src="assets/images/famisanar.jpg" alt="Logo de Famisanar EPS">
+          </a>
+        </div>
+        <div class="ticker-card" data-aos="zoom-in" data-aos-delay="200">
+          <a href="https://www.nuevaeps.com.co/personas" target="_blank" rel="noopener">
+            <img src="assets/images/Nuevaeps.png" alt="Logo de Nueva EPS">
+          </a>
+        </div>
+        <div class="ticker-card" data-aos="zoom-in" data-aos-delay="300">
+          <a href="https://dusakawiepsi.com/" target="_blank" rel="noopener">
+            <img src="assets/images/dukasawi-Photoroom.png" alt="Logo de Dusakawi EPSI">
+          </a>
+        </div>
+        <div class="ticker-card" data-aos="zoom-in" data-aos-delay="400">
+          <a href="https://www.colmedica.com/Paginas/Home.aspx" target="_blank" rel="noopener">
+            <img src="assets/images/colmedica.png" alt="Logo de Colmédica">
+          </a>
+        </div>
+        <div class="ticker-card" data-aos="zoom-in" data-aos-delay="500">
+          <a href="https://www.asmetsalud.com/#!" target="_blank" rel="noopener">
+            <img src="assets/images/asmetsalud.png" alt="Logo de AsmetSalud">
+          </a>
+        </div>
+        <div class="ticker-card" data-aos="zoom-in" data-aos-delay="600">
+          <a href="https://www.fomag.gov.co/" target="_blank" rel="noopener">
+            <img src="assets/images/fomag-Photoroom.png" alt="Logo de FOMAG">
+          </a>
+        </div>
+        <div class="ticker-card" data-aos="zoom-in" data-aos-delay="700">
+          <a href="https://www.segurosbolivar.com/" target="_blank" rel="noopener">
+            <img src="assets/images/seguros-bolivar.png" alt="Logo de Seguros Bolívar">
+          </a>
+        </div>
+
+        <!-- Duplicados para efecto ticker continuo -->
+        <div class="ticker-card">
+          <a href="https://www.saludtotal.com.co" target="_blank" rel="noopener">
+            <img src="assets/images/saludtotal.png" alt="Logo de Salud Total EPS">
+          </a>
+        </div>
+        <div class="ticker-card">
+          <a href="https://www.famisanar.com.co/" target="_blank" rel="noopener">
+            <img src="assets/images/famisanar.jpg" alt="Logo de Famisanar EPS">
+          </a>
+        </div>
+        <div class="ticker-card">
+          <a href="https://www.nuevaeps.com.co/personas" target="_blank" rel="noopener">
+            <img src="assets/images/Nuevaeps.png" alt="Logo de Nueva EPS">
+          </a>
+        </div>
+        <div class="ticker-card">
+          <a href="https://dusakawiepsi.com/" target="_blank" rel="noopener">
+            <img src="assets/images/dukasawi-Photoroom.png" alt="Logo de Dusakawi EPS">
+          </a>
+        </div>
+        <div class="ticker-card">
+          <a href="https://www.colmedica.com/Paginas/Home.aspx" target="_blank" rel="noopener">
+            <img src="assets/images/colmedica.png" alt="Logo de Colmédica">
+          </a>
+        </div>
+        <div class="ticker-card">
+          <a href="https://www.asmetsalud.com/#!" target="_blank" rel="noopener">
+            <img src="assets/images/asmetsalud.png" alt="Logo de AsmetSalud">
+          </a>
+        </div>
+        <div class="ticker-card">
+          <a href="https://www.fomag.gov.co/" target="_blank" rel="noopener">
+            <img src="assets/images/fomag-Photoroom.png" alt="Logo de FOMAG">
+          </a>
+        </div>
+        <div class="ticker-card">
+          <a href="https://www.segurosbolivar.com/" target="_blank" rel="noopener">
+            <img src="assets/images/seguros-bolivar.png" alt="Logo de Seguros Bolívar">
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</section>
+
+
+    <!-- Footer Starts Here -->
+<!-- Footer -->
+<footer aria-label="Pie de página">
+  <div class="container">
+    <div class="row">
+      <!-- Información de contacto -->
+      <div class="col-md-3 footer-item" data-aos="fade-right" data-aos-duration="1000">
+        <a href="index.html">
+          <img src="./assets/images/Unipssam_horizontal_2.png" alt="Logo UNIPSSAM" style="height: 60px;"><br><br>
+        </a>
+        <h6>Unidad Prestadora de Servicios de Salud Mental S.A.S.</h6><br>
+        <p>Correo: <a href="mailto:admisiones@unipssam.com">admisiones@unipssam.com</a></p>
+        <p>Teléfonos: <a href="tel:+573001234567">+57 300 123 4567</a> | <a href="tel:+573173728539">+57 317 372 8539</a></p>
+        <p>Dirección:</p>
+        <a href="https://maps.app.goo.gl/oxwc86WuMTJw91W49" target="_blank" rel="noopener">
+          Cl. 16 #14-61, Valledupar, Cesar<br>
+          Cl. 44 #19-140 - Sede San Martin<br>
+          KDX. 61 - 2 lt Altoviento Villa de San Andrés - Sede Aguachica
+        </a>
+        <ul class="social-icons">
+          <li><a href="https://fb.com/templatemo" target="_blank" rel="nofollow noopener" aria-label="Facebook"><i class="fa fa-facebook"></i></a></li>
+          <li><a href="https://www.behance.net/tuperfil" target="_blank" rel="nofollow noopener" aria-label="YouTube"><i class="fa fa-youtube"></i></a></li>
+          <li><a href="https://www.instagram.com/unipssam/" target="_blank" rel="nofollow noopener" aria-label="Instagram"><i class="fa fa-instagram"></i></a></li>
+        </ul>
+      </div>
+
+      <!-- Enlaces útiles -->
+      <div class="col-md-3 footer-item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+        <h4>Enlaces útiles</h4>
+        <ul class="menu-list">
+          <li><a href="acerca-de-nosotros.html">Sobre Nosotros</a></li>
+          <li><a href="services.html">Nuestros Servicios</a></li>
+          <li><a href="nuestras_sedes.html">Nuestras Sedes</a></li>
+          <li><a href="estados_financieros.html">Estados Financieros</a></li>
+          <li><a href="contact.html">Contacto</a></li>
+        </ul>
+      </div>
+
+      <!-- Horarios -->
+      <div class="col-md-3 footer-item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+        <h4>Horarios de Atención</h4>
+        <ul class="menu-list">
+          <li>
+            <strong>Urgencias y Hospitalización:</strong><br>
+            <span>24 HORAS</span><br>
+            <a href="tel:+573173728539">317 372 8539</a>
+          </li>
+          <li>
+            <strong>Consulta Externa:</strong><br>
+            <span>Lunes a Viernes</span><br>
+            <span>8:00 AM - 12:00 PM</span><br>
+            <span>2:00 PM - 5:00 PM</span><br>
+            <strong> Sábados </strong><br>
+           <span>8:00 AM - 12:00 PM</span><br>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Suscripción -->
+      <div class="col-md-3 footer-item last-item" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="300">
+        <h4>Suscríbete a Nuestro Boletín</h4>
+        <form id="contact-footer-contact" action="#" method="post" aria-label="Formulario de suscripción">
+          <div class="form-group">
+            <input name="email" type="email" class="form-control" id="email"
+              placeholder="Dirección de correo electrónico" required>
+          </div>
+          <div class="form-group">
+            <button type="submit" id="form-submit" class="filled-button">Suscribirse</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Logos institucionales -->
+<section class="logos-footer" aria-label="Logos de vigilancia y gobierno">
+  <div class="logos-container" data-aos="fade-up" data-aos-duration="1000">
+    <a href="https://www.supersalud.gov.co/" target="_blank" rel="noopener">
+      <img src="./assets/images/super_salud.webp" alt="Vigilado Supersalud" class="logo-footer">
+    </a>
+    <a href="https://www.gov.co/" target="_blank" rel="noopener">
+      <img src="./assets/images/gov_co.png" alt="Gobierno de Colombia" class="logo-footer">
+    </a>
+  </div>
+</section>
+
+<!-- Sub-footer -->
+<div class="sub-footer" role="contentinfo">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <p>
+          <a href="index.html" target="_blank">Copyright &copy; 2024 UNIPSSAM S.A.S</a> -
+          Diseño web: <a href="index.html" target="_blank" rel="nofollow noopener">Jaime Caballero</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Fin Footer -->
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Additional Scripts -->
+    <script src="assets/js/custom.js"></script>
+    <script src="assets/js/owl.js"></script>
+    <script src="assets/js/slick.js"></script>
+    <script src="assets/js/accordions.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="assets/js/efecto.js"></script>
+    <script src="assets/js/modal.js"></script>
+    <script src="assets/js/toast.js"></script>
+<!-- JS de Lightbox2 -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+
+
+  </body>
+</html>
