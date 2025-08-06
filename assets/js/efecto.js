@@ -16,90 +16,71 @@
           });
       });
   
-
-    //   efecto whassap
-  // Mostrar/ocultar menú al hacer clic en el botón
-  function toggleMenu() {
+      // efecto whsapp
+  document.addEventListener("DOMContentLoaded", function () {
     const menu = document.getElementById("contact-menu");
     const helpText = document.getElementById("help-text");
-
-    if (!menu || !helpText) return;
-
-    const isVisible = menu.classList.contains("show-menu");
-
-    if (isVisible) {
-      menu.classList.remove("show-menu");
-      setTimeout(() => {
-        helpText.style.opacity = "1";
-        helpText.style.transform = "translateX(0)";
-      }, 300);
-    } else {
-      menu.classList.add("show-menu");
-      helpText.style.opacity = "0";
-      helpText.style.transform = "translateX(-10px)";
-    }
-  }
-
-  function showHelpText() {
-    const helpText = document.getElementById("help-text");
-    if (helpText) {
-      helpText.style.opacity = "1";
-      helpText.style.transform = "translateX(0)";
-    }
-  }
-
-  function hideHelpText() {
-    const helpText = document.getElementById("help-text");
-    if (helpText) {
-      helpText.style.opacity = "0";
-      helpText.style.transform = "translateX(-10px)";
-    }
-  }
-
-  // Cierra el menú si haces clic fuera
-  document.addEventListener("click", (e) => {
+    const button = document.getElementById("contact-button");
     const container = document.getElementById("whatsapp-container");
-    const menu = document.getElementById("contact-menu");
+    const closeMenuBtn = document.getElementById("close-menu");
 
-    // Si haces clic fuera del contenedor y el menú está abierto, lo cierra
-    if (container && menu && !container.contains(e.target)) {
-      menu.classList.remove("show-menu");
+    // Alternar el menú al hacer clic en el botón
+    function toggleMenu(e) {
+      e.stopPropagation(); // ✅ Detiene la propagación para evitar que lo cierre de inmediato
 
-      const helpText = document.getElementById("help-text");
-      if (helpText) {
+      if (menu.classList.contains("show-menu")) {
+        menu.classList.remove("show-menu");
+        setTimeout(() => {
+          helpText.style.opacity = "1";
+          helpText.style.transform = "translateX(0)";
+        }, 300);
+      } else {
+        menu.classList.add("show-menu");
+        helpText.style.opacity = "0";
+        helpText.style.transform = "translateX(-10px)";
+      }
+    }
+
+    // Mostrar texto de ayuda solo en PC al pasar el mouse
+    function showHelpText() {
+      if (window.innerWidth > 768) {
         helpText.style.opacity = "1";
         helpText.style.transform = "translateX(0)";
       }
     }
-  });
-
-
-    // efecto modal
-
-    function toggleMenu() {
-        const menu = document.getElementById("contact-menu");
-        const helpText = document.getElementById("help-text");
-        
-        if (menu.classList.contains("show-menu")) {
-            menu.classList.remove("show-menu");
-            setTimeout(() => helpText.style.opacity = "1", 300);
-        } else {
-            menu.classList.add("show-menu");
-            helpText.style.opacity = "0";
-        }
-    }
-
-    function showHelpText() {
-        const helpText = document.getElementById("help-text");
-        helpText.style.opacity = "1";
-        helpText.style.transform = "translateX(0)";
-    }
 
     function hideHelpText() {
-        const helpText = document.getElementById("help-text");
+      if (window.innerWidth > 768) {
         helpText.style.opacity = "0";
         helpText.style.transform = "translateX(-10px)";
+      }
     }
 
-    // efecto modal finaciero
-    
+
+if (closeMenuBtn) {
+  closeMenuBtn.addEventListener("click", function (e) {
+    e.stopPropagation(); // Evita que el evento cierre y reabra
+    menu.classList.remove("show-menu");
+
+    // Mostrar el texto de ayuda nuevamente
+    helpText.style.opacity = "1";
+    helpText.style.transform = "translateX(0)";
+  });
+}
+
+
+    // Cerrar menú si se hace clic fuera
+    document.addEventListener("click", function (e) {
+      if (!container.contains(e.target)) {
+        menu.classList.remove("show-menu");
+        helpText.style.opacity = "1";
+        helpText.style.transform = "translateX(0)";
+      }
+    });
+
+    // Asignar eventos
+    button.addEventListener("click", toggleMenu);
+    button.addEventListener("mouseover", showHelpText);
+    container.addEventListener("mouseleave", hideHelpText);
+  });
+
