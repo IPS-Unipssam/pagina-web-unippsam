@@ -46,18 +46,19 @@
 </div>
 
 
+
+    
 <!-- Sección flotante de contacto -->
-<div id="whatsapp-container" onmouseleave="hideHelpText()">
+<div id="whatsapp-container">
   <p id="help-text">Canales de contacto</p>
 
   <div id="contact-menu">
-    <span id="close-menu" onclick="toggleMenu()" aria-label="Cerrar contacto">&times;</span>
+    <span id="close-menu" aria-label="Cerrar contacto">&times;</span>
 
-   <a href="https://wa.me/573123175936" target="_blank" class="contact-option" rel="noopener noreferrer">
+    <a href="https://wa.me/573123175936" target="_blank" class="contact-option" rel="noopener noreferrer">
       <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
       WhatsApp
     </a>
-
 
     <a href="tel:+573123175936" class="contact-option">
       <img src="https://cdn-icons-png.flaticon.com/512/724/724664.png" alt="Teléfono" />
@@ -75,7 +76,7 @@
     </a>
   </div>
 
-  <div id="contact-button" onmouseover="showHelpText()" onclick="toggleMenu()" tabindex="0" aria-label="Abrir canales de contacto">
+  <div id="contact-button" tabindex="0" aria-label="Abrir canales de contacto">
     <i class="fas fa-headset fa-2x" aria-hidden="true"></i>
   </div>
 </div>
@@ -153,15 +154,15 @@
               <i class="fa-sharp fa-solid fa-house"></i>&nbsp;&nbsp;Inicio
             </a>
           </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="acerca-de-nosotros.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
-              Acerca de nosotros
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item active" href="nuestras_sedes.html"><i class="fas fa-building"></i>&nbsp;&nbsp;Nuestras Sedes</a></li>
-              <li><a class="dropdown-item" href="estados_financieros.html"><i class="fas fa-coins"></i>&nbsp;&nbsp;Estados Financieros</a></li>
-            </ul>
-          </li>
+           <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="acerca-de-nosotros.html" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Acerca de nosotros
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item active" href="nuestras_sedes.html"><i class="fas fa-building" aria-hidden="true"></i>&nbsp;&nbsp;Nuestras Sedes</a></li>
+                <li><a class="dropdown-item" href="estados_financieros.html"><i class="fas fa-coins"></i>&nbsp;&nbsp;Estados Financieros</a></li>
+              </ul>
+            </li>
           <li class="nav-item">
             <a class="nav-link" href="services.html" title="Nuestros servicios">
               <i class="fas fa-cogs"></i>&nbsp;&nbsp;Servicios
@@ -268,6 +269,7 @@
 </section>
 
 
+
 <!-- Sección Galería -->
 <section class="gallery gallery-section" aria-labelledby="galeria-fotos">
   <div class="container">
@@ -279,97 +281,120 @@
           <span>Conoce nuestras instalaciones</span>
         </div>
       </div>
-      
 
       <!-- Carrusel -->
       <div class="col-md-12">
         <div class="gallery-grid">
-          <div class="owl-gallery owl-carousel owl-theme" aria-label="Galería de imágenes de la IPS">
-            <!-- Repite para cada imagen -->
+          <div class="owl-gallery owl-carousel owl-theme"
+               role="region"
+               aria-roledescription="carrusel"
+               aria-label="Galería de imágenes de la IPS UNIPSSAM con 12 fotos">
+
+            <!-- Ejemplo de ítem con <picture> -->
             <div class="gallery-item" data-aos="fade-up" data-aos-delay="100">
-               <a href="assets/images/fallada23.jpg" data-lightbox="galeria" data-title="Vista de la fachada de la sede principal de UNIPSSAM">
-              <img src="assets/images/fallada23.jpg" alt="Vista de la fachada de la sede principal de UNIPSSAM">
+              <a href="assets/images/fallada23.webp" data-lightbox="galeria" data-title="Vista de la fachada de la sede principal de UNIPSSAM">
+                <picture>
+                  <img src="assets/images/fallada23.webp" alt="Vista de la fachada de la sede principal de UNIPSSAM" loading="lazy">
+                </picture>
               </a>
             </div>
 
             <div class="gallery-item" data-aos="fade-up" data-aos-delay="200">
-               <a href="assets/images/cuarto.jpg" data-lightbox="galeria" data-title="Habitación para pacientes">
-              <img src="assets/images/cuarto.jpg" alt="Habitación para pacientes">
+              <a href="assets/images/cuarto.webp" data-lightbox="galeria" data-title="Habitación para pacientes">
+                <picture>
+                  <img src="assets/images/cuarto.webp" alt="Habitación para pacientes" loading="lazy">
+                </picture>
               </a>
             </div>
 
             <div class="gallery-item" data-aos="fade-up" data-aos-delay="300">
-                 <a href="assets/images/aguachica-galeria.jpg" data-lightbox="galeria" data-title="Sede de Aguachica, vista exterior">
-              <img src="assets/images/aguachica-galeria.jpg" alt="Sede de Aguachica, vista exterior">
+              <a href="assets/images/aguachica-galeria.webp" data-lightbox="galeria" data-title="Sede de Aguachica, vista exterior">
+                <picture>
+                  <img src="assets/images/aguachica-galeria.webp" alt="Sede de Aguachica, vista exterior" loading="lazy">
+                </picture>
               </a>
             </div>
 
             <div class="gallery-item" data-aos="fade-up" data-aos-delay="400">
-              <a href="assets/images/pasillo-galeria.png" data-lightbox="galeria" data-title="Pasillo clínico">
-                <img src="assets/images/pasillo-galeria.png" alt="Pasillo clínico">
+              <a href="assets/images/pasillo-galeria.webp" data-lightbox="galeria" data-title="Pasillo clínico">
+                <picture>
+                  <img src="assets/images/pasillo-galeria.webp" alt="Pasillo clínico" loading="lazy">
+                </picture>
               </a>
-             
             </div>
 
             <div class="gallery-item" data-aos="fade-up" data-aos-delay="500">
-              <a href="assets/images/pasillo2-galeria.jpg" data-lightbox="galeria" data-title="Pasillo con acceso a consultorios">
-              <img src="assets/images/pasillo2-galeria.jpg" alt="Pasillo con acceso a consultorios">
+              <a href="assets/images/pasillo2-galeria.webp" data-lightbox="galeria" data-title="Pasillo con acceso a consultorios">
+                <picture>
+                  <img src="assets/images/pasillo2-galeria.webp" alt="Pasillo con acceso a consultorios" loading="lazy">
+                </picture>
               </a>
             </div>
 
             <div class="gallery-item" data-aos="fade-up" data-aos-delay="600">
-               <a href="assets/images/pasillo.jpg" data-lightbox="galeria" data-title="Área de tránsito interno">
-              <img src="assets/images/pasillo.jpg" alt="Área de tránsito interno">
+              <a href="assets/images/pasillo.webp" data-lightbox="galeria" data-title="Área de tránsito interno">
+                <picture>
+                  <img src="assets/images/pasillo.webp" alt="Área de tránsito interno" loading="lazy">
+                </picture>
               </a>
             </div>
 
-            <div class="gallery-item" data-aos="fade-up" data-aos-delay="600">
-              <a href="assets/images/urgencias2.jpg" data-lightbox="galeria" data-title="Área de urgencias médicas 1">
-              <img src="assets/images/urgencias2.jpg" alt="Área de urgencias médicas 1">
+            <div class="gallery-item" data-aos="fade-up" data-aos-delay="700">
+              <a href="assets/images/urgencias2.webp" data-lightbox="galeria" data-title="Área de urgencias médicas 1">
+                <picture>
+                  <img src="assets/images/urgencias2.webp" alt="Área de urgencias médicas 1" loading="lazy">
+                </picture>
               </a>
             </div>
 
-            <div class="gallery-item" data-aos="fade-up" data-aos-delay="600">
-               <a href="assets/images/urgencias.jpg" data-lightbox="galeria" data-title="Área de urgencias médicas 2">
-              <img src="assets/images/urgencias.jpg" alt="Área de urgencias médicas 2">
+            <div class="gallery-item" data-aos="fade-up" data-aos-delay="800">
+              <a href="assets/images/urgencias.webp" data-lightbox="galeria" data-title="Área de urgencias médicas 2">
+                <picture>
+                  
+                  <img src="assets/images/urgencias.webp" alt="Área de urgencias médicas 2" loading="lazy">
+                </picture>
               </a>
             </div>
 
-            <div class="gallery-item" data-aos="fade-up" data-aos-delay="600">
-               <a href="assets/images/start.jpg" data-lightbox="galeria" data-title="Sala de espera institucional">
-              <img src="assets/images/start.jpg" alt="Sala de espera institucional">
+            <div class="gallery-item" data-aos="fade-up" data-aos-delay="900">
+              <a href="assets/images/start.webp" data-lightbox="galeria" data-title="Sala de espera institucional">
+                <picture>
+                  <img src="assets/images/start.webp" alt="Sala de espera institucional" loading="lazy">
+                </picture>
               </a>
             </div>
 
-            <div class="gallery-item" data-aos="fade-up" data-aos-delay="600">
-              <a href="assets/images/aguachica1.jpg" data-lightbox="galeria" data-title="Entrada alternativa sede Aguachica">
-              <img src="assets/images/aguachica1.jpg" alt="Entrada alternativa sede Aguachica">
+            <div class="gallery-item" data-aos="fade-up" data-aos-delay="1000">
+              <a href="assets/images/aguachica1.webp" data-lightbox="galeria" data-title="Entrada alternativa sede Aguachica">
+                <picture>
+                  <img src="assets/images/aguachica1.webp" alt="Entrada alternativa sede Aguachica" loading="lazy">
+                </picture>
               </a>
             </div>
 
-            <div class="gallery-item" data-aos="fade-up" data-aos-delay="600">
-              <a href="assets/images/habitacion.jpg" data-lightbox="galeria" data-title="Habitación equipada para pacientes">
-              <img src="assets/images/habitacion.jpg" alt="Habitación equipada para pacientes">
+            <div class="gallery-item" data-aos="fade-up" data-aos-delay="1100">
+              <a href="assets/images/habitacion.webp" data-lightbox="galeria" data-title="Habitación equipada para pacientes">
+                <picture>
+                  <source srcset="assets/images/habitacion.webp" type="image/webp">
+                  <img src="assets/images/habitacion.webp" alt="Habitación equipada para pacientes" loading="lazy">
+                </picture>
               </a>
             </div>
 
-            <div class="gallery-item" data-aos="fade-up" data-aos-delay="600">
-              <a href="assets/images/pasillo2.jpg" data-lightbox="galeria" data-title="Pasillo de acceso general">
-              <img src="assets/images/pasillo2.jpg" alt="Pasillo de acceso general">
+            <div class="gallery-item" data-aos="fade-up" data-aos-delay="1200">
+              <a href="assets/images/pasillo2.webp" data-lightbox="galeria" data-title="Pasillo de acceso general">
+                <picture>
+                  <img src="assets/images/pasillo2.webp" alt="Pasillo de acceso general" loading="lazy">
+                </picture>
               </a>
             </div>
+
           </div>
         </div>
       </div>
     </div>
   </div>
-  <div class="wave-bottom">
-  <svg viewBox="0 0 500 150" preserveAspectRatio="none">
-    <path d="M0.00,49.98 C150.00,150.00 349.42,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: #f4f6f9;"></path>
-  </svg>
-</div>
 </section>
-<!-- Ola decorativa inferior -->
 
 
 
@@ -457,7 +482,7 @@
           <meta itemprop="uploadDate" content="2025-02-21">
           <meta itemprop="thumbnailUrl" content="./assets/images/testimonio-paciente.jpg">
 
-          <video controls preload="metadata" poster="./assets/images/" class="w-100" style="border-radius: 12px;" itemprop="contentUrl" title="Testimonio real de un paciente">
+          <video controls preload="metadata" poster="./assets/images/testimonio.png" class="w-100" style="border-radius: 12px;" itemprop="contentUrl" title="Testimonio real de un paciente">
             <source src="./assets/images/testimonio.mp4" type="video/mp4">
             Tu navegador no soporta la reproducción de video.
           </video>
@@ -486,9 +511,6 @@
     </div>
   </div>
 </section>
-
-
-
 
     <!-- Footer -->
 <footer aria-label="Pie de página">
@@ -596,20 +618,19 @@
 </div>
 <!-- Fin Footer -->
 
-    <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script src="vendor/jquery/jquery.min.js" defer></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js" defer></script>
 
-    <!-- Additional Scripts -->
-    <script src="assets/js/custom.js"></script>
-    <script src="assets/js/owl.js"></script>
-    <script src="assets/js/slick.js"></script>
-    <script src="assets/js/accordions.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <script src="assets/js/efecto.js"></script>
-    <script src="assets/js/toast.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
-    <script src="assets/js/nav.js"></script>
-   
-   
+<!-- Scripts combinados -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" defer></script>
+<script src="https://unpkg.com/feather-icons" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js" defer></script>
+
+<!-- Script principal optimizado -->
+ <script src="assets/js/owl.js" defer></script>
+<script src="assets/js/slick.js" defer></script>
+<script src="assets/js/accordions.js" defer></script>
+<script src="assets/js/main.js" defer></script>
+
 </body>

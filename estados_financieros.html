@@ -52,13 +52,12 @@
 
   <body>
 
-  
 <!-- Sección flotante de contacto -->
-<div id="whatsapp-container" onmouseleave="hideHelpText()">
+<div id="whatsapp-container">
   <p id="help-text">Canales de contacto</p>
 
   <div id="contact-menu">
-    <span id="close-menu" onclick="toggleMenu()" aria-label="Cerrar contacto">&times;</span>
+    <span id="close-menu" aria-label="Cerrar contacto">&times;</span>
 
     <a href="https://wa.me/573123175936" target="_blank" class="contact-option" rel="noopener noreferrer">
       <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
@@ -81,7 +80,7 @@
     </a>
   </div>
 
-  <div id="contact-button" onmouseover="showHelpText()" onclick="toggleMenu()" tabindex="0" aria-label="Abrir canales de contacto">
+  <div id="contact-button" tabindex="0" aria-label="Abrir canales de contacto">
     <i class="fas fa-headset fa-2x" aria-hidden="true"></i>
   </div>
 </div>
@@ -150,24 +149,15 @@
             </a>
           </li>
 
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="acerca-de-nosotros.html" id="navbarDropdown" role="button"
-              data-bs-toggle="dropdown" aria-expanded="false">
-              Acerca de nosotros
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li>
-                <a class="dropdown-item" href="nuestras_sedes.html">
-                  <i class="fas fa-building" aria-hidden="true"></i>&nbsp;&nbsp;Nuestras Sedes
-                </a>
-              </li>
-              <li>
-                <a class="dropdown-item active" href="estados_financieros.html" aria-current="page">
-                  <i class="fas fa-coins"></i>&nbsp;&nbsp;Estados Financieros
-                </a>
-              </li>
-            </ul>
-          </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="acerca-de-nosotros.html" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Acerca de nosotros
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="nuestras_sedes.html"><i class="fas fa-building" aria-hidden="true"></i>&nbsp;&nbsp;Nuestras Sedes</a></li>
+                <li><a class="dropdown-item active" href="estados_financieros.html"><i class="fas fa-coins"></i>&nbsp;&nbsp;Estados Financieros</a></li>
+              </ul>
+            </li>
 
           <li class="nav-item">
             <a class="nav-link" href="services.html">
@@ -214,10 +204,11 @@
   </div>
 
   <div class="pdf-grid">
+
     <!-- PDF 1 -->
     <div class="pdf-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+      <img src="assets/images/pdf-icon.svg" alt="Icono PDF" class="pdf-icon" loading="lazy">
       <h6 class="pdf-title">Estados Financieros 2024 - Notas</h6>
-      <iframe class="pdf-preview" src="pdf/estados-financieros-2024-notas.pdf" title="Estados Financieros 2024 - Notas" loading="lazy"></iframe>
       <div class="pdf-actions">
         <a class="btn" href="pdf/estados-financieros-2024-notas.pdf" target="_blank" rel="noopener" title="Ver en tamaño completo" aria-label="Ver grande Estados Financieros 2024">
           <i data-feather="maximize"></i> Ver grande
@@ -230,8 +221,8 @@
 
     <!-- PDF 2 -->
     <div class="pdf-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+      <img src="assets/images/pdf-icon.svg" alt="Icono PDF" class="pdf-icon" loading="lazy">
       <h6 class="pdf-title">Estados Financieros 2019 - 2020</h6>
-      <iframe class="pdf-preview" src="pdf/estados-financieros-2019-2020.pdf" title="Estados Financieros 2019 - 2020" loading="lazy"></iframe>
       <div class="pdf-actions">
         <a class="btn" href="pdf/estados-financieros-2019-2020.pdf" target="_blank" rel="noopener" title="Ver en tamaño completo" aria-label="Ver grande Estados Financieros 2019 - 2020">
           <i data-feather="maximize"></i> Ver grande
@@ -244,8 +235,8 @@
 
     <!-- PDF 3 -->
     <div class="pdf-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+      <img src="assets/images/pdf-icon.svg" alt="Icono PDF" class="pdf-icon" loading="lazy">
       <h6 class="pdf-title">Estados Financieros 2023 - 2022</h6>
-      <iframe class="pdf-preview" src="pdf/estados-financieros-2023-2022.pdf" title="Estados Financieros 2023 - 2022" loading="lazy"></iframe>
       <div class="pdf-actions">
         <a class="btn" href="pdf/estados-financieros-2023-2022.pdf" target="_blank" rel="noopener" title="Ver en tamaño completo" aria-label="Ver grande Estados Financieros 2023 - 2022">
           <i data-feather="maximize"></i> Ver grande
@@ -258,8 +249,8 @@
 
     <!-- PDF 4 -->
     <div class="pdf-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
+      <img src="assets/images/pdf-icon.svg" alt="Icono PDF" class="pdf-icon" loading="lazy">
       <h6 class="pdf-title">Estados Financieros Finales 2022</h6>
-      <iframe class="pdf-preview" src="pdf/revelacion-estados-financieros-finales-2022.pdf" title="Revelación a los Estados Financieros Finales 2022" loading="lazy"></iframe>
       <div class="pdf-actions">
         <a class="btn" href="pdf/revelacion-estados-financieros-finales-2022.pdf" target="_blank" rel="noopener" title="Ver en tamaño completo" aria-label="Ver grande Estados Financieros Finales 2022">
           <i data-feather="maximize"></i> Ver grande
@@ -269,12 +260,12 @@
         </a>
       </div>
     </div>
+
   </div>
 </section>
 
 
- 
-  
+
 <!-- Sección: Convenios -->
 <section class="partners-section" aria-labelledby="titulo-convenios">
   <div class="section-heading" data-aos="fade-up" data-aos-duration="800">
@@ -285,89 +276,107 @@
   <div class="ticker-section" data-aos="fade-up" data-aos-duration="1000">
     <div class="ticker-wrapper" aria-label="Logos de entidades con convenio">
       <div class="ticker-track">
-        <!-- Tarjetas con logos -->
+        
+        <!-- Logos originales -->
         <div class="ticker-card" data-aos="zoom-in" data-aos-delay="0">
-          <a href="https://www.saludtotal.com.co" target="_blank" rel="noopener">
-            <img src="assets/images/saludtotal.png" alt="Logo de Salud Total EPS">
+          <a href="https://www.saludtotal.com.co" target="_blank" rel="noopener" 
+             title="Ir al sitio de Salud Total EPS" aria-label="Ir al sitio de Salud Total EPS">
+            <img src="assets/images/saludtotal.webp" alt="Logo de Salud Total EPS" loading="lazy" width="150" height="80">
           </a>
         </div>
         <div class="ticker-card" data-aos="zoom-in" data-aos-delay="100">
-          <a href="https://www.famisanar.com.co/" target="_blank" rel="noopener">
-            <img src="assets/images/famisanar.jpg" alt="Logo de Famisanar EPS">
+          <a href="https://www.famisanar.com.co/" target="_blank" rel="noopener"
+             title="Ir al sitio de Famisanar EPS" aria-label="Ir al sitio de Famisanar EPS">
+            <img src="assets/images/famisanar.webp" alt="Logo de Famisanar EPS" loading="lazy" width="150" height="80">
           </a>
         </div>
         <div class="ticker-card" data-aos="zoom-in" data-aos-delay="200">
-          <a href="https://www.nuevaeps.com.co/personas" target="_blank" rel="noopener">
-            <img src="assets/images/Nuevaeps.png" alt="Logo de Nueva EPS">
+          <a href="https://www.nuevaeps.com.co/personas" target="_blank" rel="noopener"
+             title="Ir al sitio de Nueva EPS" aria-label="Ir al sitio de Nueva EPS">
+            <img src="assets/images/Nuevaeps.webp" alt="Logo de Nueva EPS" loading="lazy" width="150" height="80">
           </a>
         </div>
         <div class="ticker-card" data-aos="zoom-in" data-aos-delay="300">
-          <a href="https://dusakawiepsi.com/" target="_blank" rel="noopener">
-            <img src="assets/images/dukasawi-Photoroom.png" alt="Logo de Dusakawi EPSI">
+          <a href="https://dusakawiepsi.com/" target="_blank" rel="noopener"
+             title="Ir al sitio de Dusakawi EPS" aria-label="Ir al sitio de Dusakawi EPS">
+            <img src="assets/images/dukasawi.webp" alt="Logo de Dusakawi EPSI" loading="lazy" width="150" height="80">
           </a>
         </div>
         <div class="ticker-card" data-aos="zoom-in" data-aos-delay="400">
-          <a href="https://www.colmedica.com/Paginas/Home.aspx" target="_blank" rel="noopener">
-            <img src="assets/images/colmedica.png" alt="Logo de Colmédica">
+          <a href="https://www.colmedica.com/Paginas/Home.aspx" target="_blank" rel="noopener"
+             title="Ir al sitio de Colmédica" aria-label="Ir al sitio de Colmédica">
+            <img src="assets/images/colmedica.webp" alt="Logo de Colmédica" loading="lazy" width="150" height="80">
           </a>
         </div>
         <div class="ticker-card" data-aos="zoom-in" data-aos-delay="500">
-          <a href="https://www.asmetsalud.com/#!" target="_blank" rel="noopener">
-            <img src="assets/images/asmetsalud.png" alt="Logo de AsmetSalud">
+          <a href="https://www.asmetsalud.com/#!" target="_blank" rel="noopener"
+             title="Ir al sitio de AsmetSalud" aria-label="Ir al sitio de AsmetSalud">
+            <img src="assets/images/asmetsalud.webp" alt="Logo de AsmetSalud" loading="lazy" width="150" height="80">
           </a>
         </div>
         <div class="ticker-card" data-aos="zoom-in" data-aos-delay="600">
-          <a href="https://www.fomag.gov.co/" target="_blank" rel="noopener">
-            <img src="assets/images/fomag-Photoroom.png" alt="Logo de FOMAG">
+          <a href="https://www.fomag.gov.co/" target="_blank" rel="noopener"
+             title="Ir al sitio de FOMAG" aria-label="Ir al sitio de FOMAG">
+            <img src="assets/images/fomag.webp" alt="Logo de FOMAG" loading="lazy" width="150" height="80">
           </a>
         </div>
         <div class="ticker-card" data-aos="zoom-in" data-aos-delay="700">
-          <a href="https://www.segurosbolivar.com/" target="_blank" rel="noopener">
-            <img src="assets/images/seguros-bolivar.png" alt="Logo de Seguros Bolívar">
+          <a href="https://www.segurosbolivar.com/" target="_blank" rel="noopener"
+             title="Ir al sitio de Seguros Bolívar" aria-label="Ir al sitio de Seguros Bolívar">
+            <img src="assets/images/seguros-bolivar.webp" alt="Logo de Seguros Bolívar" loading="lazy" width="150" height="80">
           </a>
         </div>
 
         <!-- Duplicados para efecto ticker continuo -->
         <div class="ticker-card">
-          <a href="https://www.saludtotal.com.co" target="_blank" rel="noopener">
-            <img src="assets/images/saludtotal.png" alt="Logo de Salud Total EPS">
+          <a href="https://www.saludtotal.com.co" target="_blank" rel="noopener"
+             title="Ir al sitio de Salud Total EPS" aria-label="Ir al sitio de Salud Total EPS">
+            <img src="assets/images/saludtotal.webp" alt="Logo de Salud Total EPS" loading="lazy" width="150" height="80">
           </a>
         </div>
         <div class="ticker-card">
-          <a href="https://www.famisanar.com.co/" target="_blank" rel="noopener">
-            <img src="assets/images/famisanar.jpg" alt="Logo de Famisanar EPS">
+          <a href="https://www.famisanar.com.co/" target="_blank" rel="noopener"
+             title="Ir al sitio de Famisanar EPS" aria-label="Ir al sitio de Famisanar EPS">
+            <img src="assets/images/famisanar.webp" alt="Logo de Famisanar EPS" loading="lazy" width="150" height="80">
           </a>
         </div>
         <div class="ticker-card">
-          <a href="https://www.nuevaeps.com.co/personas" target="_blank" rel="noopener">
-            <img src="assets/images/Nuevaeps.png" alt="Logo de Nueva EPS">
+          <a href="https://www.nuevaeps.com.co/personas" target="_blank" rel="noopener"
+             title="Ir al sitio de Nueva EPS" aria-label="Ir al sitio de Nueva EPS">
+            <img src="assets/images/Nuevaeps.webp" alt="Logo de Nueva EPS" loading="lazy" width="150" height="80">
           </a>
         </div>
         <div class="ticker-card">
-          <a href="https://dusakawiepsi.com/" target="_blank" rel="noopener">
-            <img src="assets/images/dukasawi-Photoroom.png" alt="Logo de Dusakawi EPS">
+          <a href="https://dusakawiepsi.com/" target="_blank" rel="noopener"
+             title="Ir al sitio de Dusakawi EPSI" aria-label="Ir al sitio de Dusakawi EPSI">
+            <img src="assets/images/dukasawi.webp" alt="Logo de Dusakawi EPSI" loading="lazy" width="150" height="80">
           </a>
         </div>
         <div class="ticker-card">
-          <a href="https://www.colmedica.com/Paginas/Home.aspx" target="_blank" rel="noopener">
-            <img src="assets/images/colmedica.png" alt="Logo de Colmédica">
+          <a href="https://www.colmedica.com/Paginas/Home.aspx" target="_blank" rel="noopener"
+             title="Ir al sitio de Colmédica" aria-label="Ir al sitio de Colmédica">
+            <img src="assets/images/colmedica.webp" alt="Logo de Colmédica" loading="lazy" width="150" height="80">
           </a>
         </div>
         <div class="ticker-card">
-          <a href="https://www.asmetsalud.com/#!" target="_blank" rel="noopener">
-            <img src="assets/images/asmetsalud.png" alt="Logo de AsmetSalud">
+          <a href="https://www.asmetsalud.com/#!" target="_blank" rel="noopener"
+             title="Ir al sitio de AsmetSalud" aria-label="Ir al sitio de AsmetSalud">
+            <img src="assets/images/asmetsalud.webp" alt="Logo de AsmetSalud" loading="lazy" width="150" height="80">
           </a>
         </div>
         <div class="ticker-card">
-          <a href="https://www.fomag.gov.co/" target="_blank" rel="noopener">
-            <img src="assets/images/fomag-Photoroom.png" alt="Logo de FOMAG">
+          <a href="https://www.fomag.gov.co/" target="_blank" rel="noopener"
+             title="Ir al sitio de FOMAG" aria-label="Ir al sitio de FOMAG">
+            <img src="assets/images/fomag.webp" alt="Logo de FOMAG" loading="lazy" width="150" height="80">
           </a>
         </div>
         <div class="ticker-card">
-          <a href="https://www.segurosbolivar.com/" target="_blank" rel="noopener">
-            <img src="assets/images/seguros-bolivar.png" alt="Logo de Seguros Bolívar">
+          <a href="https://www.segurosbolivar.com/" target="_blank" rel="noopener"
+             title="Ir al sitio de Seguros Bolívar" aria-label="Ir al sitio de Seguros Bolívar">
+            <img src="assets/images/seguros-bolivar.webp" alt="Logo de Seguros Bolívar" loading="lazy" width="150" height="80">
           </a>
         </div>
+
       </div>
     </div>
   </div>
@@ -474,22 +483,24 @@
     </div>
   </div>
 </div>
-    <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- Fin Footer -->
 
-    <!-- Additional Scripts -->
-    <script src="assets/js/custom.js"></script>
-    <script src="assets/js/owl.js"></script>
-    <script src="assets/js/slick.js"></script>
-    <script src="assets/js/accordions.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <script src="https://unpkg.com/feather-icons"></script>
-    <script src="assets/js/efecto.js"></script>
-    <script src="assets/js/modal.js"></script>
-    <script src="assets/js/nav.js"></script>
-   
-   
+<!-- Bootstrap core JavaScript -->
+<script src="vendor/jquery/jquery.min.js" defer></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js" defer></script>
+
+<!-- Scripts combinados -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" defer></script>
+<script src="https://unpkg.com/feather-icons" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js" defer></script>
+
+<!-- Script principal optimizado -->
+ <script src="assets/js/owl.js" defer></script>
+<script src="assets/js/slick.js" defer></script>
+<script src="assets/js/accordions.js" defer></script>
+<script src="assets/js/main.js" defer></script>
+
+
 
   </body>
 </html>

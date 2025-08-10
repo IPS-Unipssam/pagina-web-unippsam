@@ -1627,7 +1627,7 @@ footer {
 /* Encabezado de la página de Contacto */
 .page-heading-contact {
   text-align: center;
-  background-image: url(../images/urgencias_prueba.jpg);
+  background-image: url(../images/urgencias_prueba.webp);
   background-repeat: no-repeat;
   background-position: center 20%;
   background-size: cover;
@@ -2316,140 +2316,92 @@ footer {
   
 
 /* Sección valores corporativos */
+/* ===== Valores Corporativos ===== */
 .corporate-values {
-  background-color: #f7f7f7;
   padding: 60px 0;
-  text-align: center;
+  background-color: #fff;
 }
 
 .corporate-values .section-heading h2 {
-  font-size: 32px;
   font-weight: bold;
-  color: #333;
-  margin-bottom: 10px;
+  color: #0056b3;
 }
 
 .corporate-values .section-heading p {
-  font-size: 16px;
-  color: #666;
-  margin-bottom: 50px;
+  color: #555;
+  max-width: 700px;
+  margin: 0 auto;
 }
 
-/* Layout en grid para las tarjetas */
 .value-wrapper {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 20px;
-  justify-items: center;
-}
-
-
-/* Tarjeta de valor */
-.value-card {
-  position: relative;
-  width: 100%;
-  max-width: 200px;
-  background-color: #fff;
-  border-radius: 16px;
-  padding: 16px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
-  overflow: hidden;
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-  cursor: pointer;
-  outline: none;
-}
-
-.value-card:hover,
-.value-card:focus-within {
-  transform: translateY(-6px);
-  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.12);
-}
-
-/* Ícono */
-.value-card .icon {
-  font-size: 48px;
-  margin-bottom: 20px;
-  display: inline-block;
-  background: linear-gradient(135deg, #0179C4 0%, #74EDE4 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-/* Título */
-.value-card h4 {
-  font-size: 20px;
-  font-weight: 700;
-  color: #0179C4;
-  margin-bottom: 0;
-}
-
-/* Cortina / Overlay */
-.value-overlay {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgb(40, 155, 248);
-  backdrop-filter: blur(5px);
-  padding: 20px;
-  border-radius: 16px;
-  transition: top 0.4s ease;
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
   justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.value-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  padding: 2rem 1rem;
   text-align: center;
+  transition: all 0.3s ease;
+  cursor: default;
+  
+  /* NUEVO: ancho reducido para quepan 5 en fila */
+  max-width: 200px;
+  min-width: 160px;
+  flex: 1 1 auto;
 }
 
-.value-card:hover .value-overlay,
-.value-card:focus-within .value-overlay {
-  top: 0;
+.value-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.15);
 }
 
-.value-overlay p {
+.value-card .icon {
+  font-size: 2.5rem;
+  background: linear-gradient(135deg, #007bff, #00a6ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #007bff;
+  display: inline-block;
+  margin-bottom: 1rem;
+ 
+}
+
+.value-card h4 {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #222;
+}
+.parrafo{
   font-size: 16px;
-  font-weight: 1000;
-  line-height: 1.6;
-  margin: 0;
-  color: white;
+  font-weight: 500;
+}
+
+.value-card p {
+  font-size: 0.9rem;
+  color: #555;
+  font-weight: 600;
 }
 
 /* Responsive */
-@media (max-width: 768px) {
-  .corporate-values .section-heading h2 {
-    font-size: 26px;
-  }
-
-  .corporate-values .section-heading p {
-    font-size: 14px;
-  }
-
-  .value-card h4 {
-    font-size: 18px;
-  }
-
-  .value-overlay p {
-    font-size: 14px;
-  }
-
-  .value-overlay {
-    position: static;
-    background: none;
-    backdrop-filter: none;
-    color: #333;
-    padding-top: 10px;
+@media (max-width: 992px) {
+  .value-card {
+    max-width: 45%;
   }
 }
-/* Responsive: apilar en móviles */
-@media (max-width: 1024px) {
-  .value-wrapper {
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  }
 
+@media (max-width: 576px) {
   .value-card {
     max-width: 100%;
   }
 }
+
 
 /* SECCIÓN: Iconos de servicios */
 .iconos-servicios {
@@ -2913,74 +2865,76 @@ footer {
 	transform: translateY(-2px);
   }
   
-  
-  /* estilos para estados finacieros  */
+  /* estilos pdf estados financieros */
+  .pdf-grid {
+  display: grid;
+  margin-bottom: 45px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+}
 
-.pdf-grid {
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-	gap: 2rem;
-  }
+.pdf-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
 
+.pdf-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+}
+
+.pdf-icon {
+  width: 64px;
+  height: auto;
+  margin-bottom: 0.8rem;
+}
+
+.pdf-title {
+  font-weight: bold;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.pdf-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 0.9rem;
+  background-color: #007bff;
+  font-weight: bold;
+  color: #fff;
+  transition: background-color 0.2s ease;
+}
+
+.btn:hover {
+  background-color: #21f7ec;
+}
+
+@media (max-width: 768px) {
   .pdf-card {
-	background: #fff;
-	border-radius: 12px;
-	box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-	overflow: hidden;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	padding: 1rem;
-	transition: transform 0.2s ease;
+    padding: 1rem;
   }
-
-  .pdf-card:hover {
-	transform: translateY(-5px);
-  }
-
-  .pdf-title {
-	font-weight: bold;
-	margin-bottom: 0.5rem;
-	font-size: 1.1rem;
-	text-align: center;
-  }
-
-  .pdf-preview {
-	width: 100%;
-	height: 240px;
-	border: 1px solid #ccc;
-	margin-bottom: 1rem;
-  }
-
-  .pdf-actions {
-	display: flex;
-	gap: 1rem;
-  }
-
-  .btn {
-	display: inline-flex;
-	align-items: center;
-	gap: 0.4rem;
-	padding: 0.5rem 1rem;
-	border: none;
-	border-radius: 8px;
-	cursor: pointer;
-	text-decoration: none;
-	font-size: 0.9rem;
-	background-color: #007bff;
-	color: #fff;
-	transition: background-color 0.2s ease;
-  }
-
-  .btn:hover {
-	background-color: #0056b3;
-  }
-
-  @media (max-width: 768px) {
-	.pdf-preview {
-	  height: 250px;
-	}
-  }
+}
 
 /* Servicios index*/
 .home-services {
