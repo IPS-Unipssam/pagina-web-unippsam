@@ -2,19 +2,21 @@
 <html lang="es">
 
 <head>
-
   <!-- Codificación y adaptación a dispositivos -->
   <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <!-- SEO -->
+  <!-- SEO básico -->
   <title>IPS UNIPSSAM S.A.S - Especialistas en Salud Mental</title>
   <meta name="description" content="IPS UNIPSSAM S.A.S. es una institución especializada en salud mental en Colombia, ofreciendo atención integral psicológica y psiquiátrica con enfoque humano.">
-  <meta name="keywords" content="salud mental, psiquiatría, psicología, atención psicológica, IPS Colombia, bienestar emocional, terapia, UNIPSSAM">
+  <meta name="robots" content="index, follow">
+  <!-- Cambia la URL canonical por la URL real de tu web -->
+  <link rel="canonical" href="https://unipssam.com/">
   <meta name="author" content="Jaime Caballero">
 
-  <!-- Accesibilidad y experiencia móvil -->
-  <meta name="theme-color" content="#0a4a7c"> 
+  <!-- Tema/Color de la interfaz -->
+  <meta name="theme-color" content="#0a4a7c">
 
   <!-- Preconexión a fuentes externas para rendimiento -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,204 +26,242 @@
   <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
 
   <!-- Favicon / ícono del sitio -->
-  <link rel="icon" href="./assets/images/logito.png" type="image/x-icon">
+  <link rel="icon" href="/assets/images/logito.png" type="image/x-icon">
 
   <!-- Librerías CSS externas -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
-  <!-- CSS de Lightbox2 -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
 
-  <!-- Bootstrap core CSS -->
-  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap core CSS (asegúrate que es la versión que usas en el proyecto) -->
+  <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
   <!-- Archivos de estilo locales -->
-  <link rel="stylesheet" href="assets/css/fontawesome.css">
-  <link rel="stylesheet" href="assets/css/templatemo-finance-business.css">
-  <link rel="stylesheet" href="assets/css/owl.css">
-    <link rel="stylesheet" href="assets/css/toast.css">
+  <link rel="stylesheet" href="/assets/css/fontawesome.css">
+  <link rel="stylesheet" href="/assets/css/templatemo-finance-business.css">
+  <link rel="stylesheet" href="/assets/css/owl.css">
+  <link rel="stylesheet" href="/assets/css/toast.css">
+
+  <!-- JSON-LD (Schema.org) básico para organización - ajusta URL/logo si es necesario -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "IPS UNIPSSAM S.A.S.",
+    "url": "https://unipssam.com/",
+    "logo": "https://unipssam.com/assets/images/Unipssam_horizontal_2.png",
+    "telephone": "+573123175936",
+    "email": "admisiones@unipssam.com"
+  }
+  </script>
 
   <!-- Comentario: Unidad Prestadora del Servicio Mental (UNIPSSAM) -->
 
+  <!-- Pequeño estilo para el enlace "Saltar al contenido" (puedes mover esto a tu CSS principal) -->
+  <style>
+    .skip-link {
+      position: absolute;
+      top: -40px;
+      left: 0;
+      background: #0a4a7c;
+      color: white;
+      padding: 8px 12px;
+      z-index: 1000;
+    }
+    .skip-link:focus {
+      top: 10px;
+    }
+  </style>
 </head>
 
-  <body>
-<!-- Modal de Bienvenida -->
-<div id="welcomeModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-describedby="modalDesc">
-  <div class="modal-content" tabindex="-1" data-aos="zoom-in" data-aos-duration="800">
-    
-    <!-- Botón de cierre -->
-    <button class="close-btn" id="closeModal" aria-label="Cerrar modal">
-      <i class="bi bi-x-lg" aria-hidden="true"></i>
-    </button>
+<body>
+  <!-- Enlace para accesibilidad: saltar al contenido principal -->
+  <a class="skip-link" href="#main-content">Saltar al contenido</a>
 
-    <!-- Imagen de encabezado con overlay de logo -->
-    <div class="modal-header-img">
-      <img src="assets/images/admisiones.jpg" alt="Equipo de admisiones UNIPSSAM" class="modal-img" />
-      <div class="logo-overlay">
-        <img src="assets/images/Unipssam_horizontal_2.png" alt="Logo UNIPSSAM" />
+  <!-- Modal de Bienvenida (aria-hidden true por defecto; controla con JS) -->
+  <div id="welcomeModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-describedby="modalDesc" aria-hidden="true">
+    <div class="modal-content" tabindex="-1" data-aos="zoom-in" data-aos-duration="800">
+
+      <!-- Botón de cierre -->
+      <button class="close-btn" id="closeModal" aria-label="Cerrar modal">
+        <i class="fas fa-times" aria-hidden="true"></i>
+      </button>
+
+      <!-- Imagen de encabezado con overlay de logo -->
+      <div class="modal-header-img">
+        <img src="/assets/images/admisiones.jpg" alt="Equipo de admisiones UNIPSSAM" class="modal-img" loading="lazy" />
+        <div class="logo-overlay">
+          <img src="/assets/images/Unipssam_horizontal_2.png" alt="Logo UNIPSSAM" />
+        </div>
       </div>
-    </div>
 
-    <!-- Cuerpo del modal -->
-    <div class="modal-body-text">
-      <h2 id="modalTitle">¡Bienvenido a UNIPSSAM!</h2>
-      <p id="modalDesc">Estamos aquí para brindarte el mejor acompañamiento en salud mental. Agenda tu cita fácilmente con nuestro equipo de admisiones.</p>
-      <a href="https://ixcolombia.github.io/qrystalos.external/#/" class="boton_modal" target="_blank" rel="noopener noreferrer">
-        Programa tu cita
+      <!-- Cuerpo del modal -->
+      <div class="modal-body-text">
+        <h2 id="modalTitle">¡Bienvenido a UNIPSSAM!</h2>
+        <p id="modalDesc">Estamos aquí para brindarte el mejor acompañamiento en salud mental. Agenda tu cita fácilmente con nuestro equipo de admisiones.</p>
+        <a href="https://ixcolombia.github.io/qrystalos.external/#/" class="boton_modal" target="_blank" rel="noopener noreferrer">Programa tu cita</a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="jumper">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+
+  <!-- Sección flotante de contacto -->
+  <div id="whatsapp-container">
+    <p id="help-text">Canales de contacto</p>
+
+    <div id="contact-menu">
+      <span id="close-menu" aria-label="Cerrar contacto">&times;</span>
+
+      <a href="https://wa.me/573123175936" target="_blank" class="contact-option" rel="noopener noreferrer">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
+        WhatsApp
+      </a>
+
+      <a href="tel:+573123175936" class="contact-option">
+        <img src="https://cdn-icons-png.flaticon.com/512/724/724664.png" alt="Teléfono" />
+        Llamada
+      </a>
+
+      <a href="mailto:contacto@unipssam.com" class="contact-option">
+        <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Correo electrónico" />
+        Correo
+      </a>
+
+      <a href="https://ixcolombia.github.io/qrystalos.external/#/" target="_blank" class="contact-option" rel="noopener noreferrer">
+        <img src="https://cdn-icons-png.flaticon.com/512/747/747310.png" alt="Agendar cita médica" />
+        Programar Cita
       </a>
     </div>
-    
-  </div>
-</div>
 
-
-<!-- Preloader -->
-<div id="preloader">
-  <div class="jumper">
-    <div></div>
-    <div></div>
-    <div></div>
-  </div>
-</div>
-<!-- Sección flotante de contacto -->
-
-
-    
-<!-- Sección flotante de contacto -->
-<div id="whatsapp-container">
-  <p id="help-text">Canales de contacto</p>
-
-  <div id="contact-menu">
-    <span id="close-menu" aria-label="Cerrar contacto">&times;</span>
-
-    <a href="https://wa.me/573123175936" target="_blank" class="contact-option" rel="noopener noreferrer">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
-      WhatsApp
-    </a>
-
-    <a href="tel:+573123175936" class="contact-option">
-      <img src="https://cdn-icons-png.flaticon.com/512/724/724664.png" alt="Teléfono" />
-      Llamada
-    </a>
-
-    <a href="mailto:contacto@unipssam.com" class="contact-option">
-      <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Correo electrónico" />
-      Correo
-    </a>
-
-    <a href="https://ixcolombia.github.io/qrystalos.external/#/" target="_blank" class="contact-option" rel="noopener noreferrer">
-      <img src="https://cdn-icons-png.flaticon.com/512/747/747310.png" alt="Agendar cita médica" />
-      Programar Cita
-    </a>
-  </div>
-
-  <div id="contact-button" tabindex="0" aria-label="Abrir canales de contacto">
-    <i class="fas fa-headset fa-2x" aria-hidden="true"></i>
-  </div>
-</div>
-
-<!-- Toast de Apoyo al Usuario -->
-<div class="toast-support" role="alert" aria-live="polite" aria-atomic="true" id="userSupportToast">
-  <div class="toast-content">
-    <div class="toast-icon" tabindex="0">🎉</div>
-    <div class="toast-message">
-      <strong>¿Necesitas ayuda?</strong> En UNIPSSAM Estamos contigo 😊<br>
-      <a href="https://wa.me/573123175936" target="_blank" class="toast-link">Escríbenos por WhatsApp</a> · O dejanos un mensaje
-      <a href="contact.html" class="toast-link">Formulario de contacto</a>
+    <div id="contact-button" tabindex="0" aria-label="Abrir canales de contacto">
+      <i class="fas fa-headset fa-2x" aria-hidden="true"></i>
     </div>
-    <button class="toast-close" aria-label="Cerrar notificación">&times;</button>
   </div>
-</div>
 
-
-<!-- Header superior -->
-<div class="sub-header">
-  <div class="container">
-    <div class="row">
-      <!-- Sección izquierda -->
-      <div class="left-info-box">
-        <ul class="left-info">
-          <li>
-            <a href="#" title="Horarios Consulta Externa">
-              <i class="fa fa-clock-o" aria-hidden="true"></i>
-              Lun–Vie 08:00 AM – 05:00 PM
-              <span class="divider"></span>
-              Sáb 08:00 AM – 12:00 PM
-            </a>
-          </li>
-          <li>
-            <a href="tel:+573123175936" title="Llamar a Urgencias">
-              <i class="fa fa-phone" aria-hidden="true"></i>+57 317-372-8539
-            </a>
-          </li>
-          <li>
-            <a href="contact.html" title="Urgencias 24 Horas" class="urgent-blink">
-              <i class="fa fa-ambulance" aria-hidden="true"></i> Urgencias 24 Horas
-            </a>
-          </li>
-        </ul>
+  <!-- Toast de Apoyo al Usuario -->
+  <div class="toast-support" role="alert" aria-live="polite" aria-atomic="true" id="userSupportToast">
+    <div class="toast-content">
+      <div class="toast-icon" tabindex="0">🎉</div>
+      <div class="toast-message">
+        <strong>¿Necesitas ayuda?</strong> En UNIPSSAM Estamos contigo 😊<br>
+        <a href="https://wa.me/573123175936" target="_blank" class="toast-link">Escríbenos por WhatsApp</a> · O dejanos un mensaje
+        <a href="/contact.html" class="toast-link">Formulario de contacto</a>
       </div>
-
-      <!-- Sección derecha -->
-      <div class="right-icons-box">
-      <ul class="right-icons">
-        <li class="call-center-item">
-        <a href="tel:+573123175936" title="Llamar al Call Center">
-          <i class="fa fa-headphones fa-2x" aria-hidden="true"></i>
-          <span class="call-text">Call Center – 312-317-5936</span>
-        </a>
-      </li>
-      </ul>
-    </div>
+      <button class="toast-close" aria-label="Cerrar notificación">&times;</button>
     </div>
   </div>
-</div>
 
-<!-- Navegación principal -->
-<section class="hero">
-  <header class="header">
-    <nav class="navbar navbar-expand-lg" aria-label="Menú principal">
-      <div class="container">
-        <a class="navbar-brand" href="index.html">
-          <img src="./assets/images/Unipssam_horizontal_2.png" alt="Logo de UNIPSSAM" style="height: 60px;">
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Menú de navegación">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-              <a class="nav-link active" href="index.html" aria-current="page">
-                <i class="fa-sharp fa-solid fa-house"></i>&nbsp;&nbsp;Inicio
+  <!-- Header superior -->
+  <div class="sub-header">
+    <div class="container">
+      <div class="row">
+        <!-- Sección izquierda -->
+        <div class="left-info-box">
+          <ul class="left-info">
+            <li>
+              <a href="#" title="Horarios Consulta Externa">
+                <i class="fa fa-clock-o" aria-hidden="true"></i>
+                Lun–Vie 08:00 AM – 05:00 PM
+                <span class="divider"></span>
+                Sáb 08:00 AM – 12:00 PM
               </a>
             </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="acerca-de-nosotros.html" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Acerca de nosotros
+            <li>
+              <a href="tel:+573123175936" title="Llamar a Urgencias">
+                <i class="fa fa-phone" aria-hidden="true"></i>+57 317-372-8539
               </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="nuestras_sedes.html"><i class="fas fa-building" aria-hidden="true"></i>&nbsp;&nbsp;Nuestras Sedes</a></li>
-                <li><a class="dropdown-item" href="estados_financieros.html"><i class="fas fa-coins"></i>&nbsp;&nbsp;Estados Financieros</a></li>
-              </ul>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="services.html"><i class="fas fa-cogs"></i>&nbsp;&nbsp;Servicios</a>
+            <li>
+              <a href="/contact.html" title="Urgencias 24 Horas" class="urgent-blink">
+                <i class="fa fa-ambulance" aria-hidden="true"></i> Urgencias 24 Horas
+              </a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contact.html"><i class="fa-sharp fa-solid fa-address-book"></i>&nbsp;&nbsp;Contacto</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../assets/includes/login.php"><i class="fa-sharp fa-solid fa-users"></i>&nbsp;&nbsp;Aplicativo</a>
+          </ul>
+        </div>
+
+        <!-- Sección derecha -->
+        <div class="right-icons-box">
+          <ul class="right-icons">
+            <li class="call-center-item">
+              <a href="tel:+573123175936" title="Llamar al Call Center">
+                <i class="fa fa-headphones fa-2x" aria-hidden="true"></i>
+                <span class="call-text">Call Center – 312-317-5936</span>
+              </a>
             </li>
           </ul>
         </div>
       </div>
-    </nav>
-  </header>
-</section>
+    </div>
+  </div>
+
+  <!-- Navegación principal -->
+  <section class="hero">
+    <header class="header">
+      <nav class="navbar navbar-expand-lg" role="navigation" aria-label="Menú principal">
+        <div class="container">
+          <a class="navbar-brand" href="/index.html">
+            <img src="/assets/images/Unipssam_horizontal_2.png" alt="Logo de UNIPSSAM" style="height: 60px;" loading="eager">
+          </a>
+
+          <!-- Botón de colapso (Bootstrap 5 data-bs-*) -->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Menú de navegación">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="/index.html" aria-current="page">
+                  <i class="fa-solid fa-house"></i>&nbsp;&nbsp;Inicio
+                </a>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="/acerca-de-nosotros.html" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Acerca de nosotros
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="/nuestras_sedes.html"><i class="fas fa-building" aria-hidden="true"></i>&nbsp;&nbsp;Nuestras Sedes</a></li>
+                  <li><a class="dropdown-item" href="/estados_financieros.html"><i class="fas fa-coins"></i>&nbsp;&nbsp;Estados Financieros</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="/services.html"><i class="fas fa-cogs"></i>&nbsp;&nbsp;Servicios</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="/contact.html"><i class="fa-solid fa-address-book"></i>&nbsp;&nbsp;Contacto</a>
+              </li>
+
+              <!-- Nota: reorganicé el enlace del aplicativo para que apunte a una ruta desde la raíz.
+                   Ajusta /aplicativo/ al path real en tu servidor (por ejemplo /login.php o /aplicativo/login.php) -->
+              <li class="nav-item">
+                <a class="nav-link" href="/aplicativo/"><i class="fa-solid fa-users"></i>&nbsp;&nbsp;Aplicativo</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- MAIN: titulo principal (único H1) -->
+    <main id="main-content">
+      <h1>IPS UNIPSSAM S.A.S. — Especialistas en Salud Mental</h1>
+      <!-- El contenido del "hero" visual (imagen/banner) puede ir aquí; mantén el H1 antes del contenido principal o visible para crawlers -->
+    </main>
+  </section>
 
 <!-- Banner principal -->
 <div class="main-banner header-text" id="top">
